@@ -93,3 +93,15 @@ Tuple SubtractVectorFromZeroVector(Tuple zero, Tuple b){
     result.w = b.w;
     return result;
 }
+
+//testNegateTuple
+Tuple negateTuple(Tuple a){
+    Tuple result;
+    result.x = a.x * -1.0;
+    result.y = a.y * -1.0;
+    result.z = a.z * -1.0;
+    result.w = a.w * -1.0;
+    return result;
+}
+
+

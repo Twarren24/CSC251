@@ -209,7 +209,6 @@ void testSubtractVectorFromZeroVector(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
-#if 0 
 /*
 Scenario​: Negating a tuple
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -224,6 +223,7 @@ void testNegateTuple(void) {
     CU_ASSERT( a.z == -3 );
     CU_ASSERT( a.w ==  4 );
 }
+#if 0 
 /*
  	​Scenario​: Multiplying a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -527,8 +527,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
             || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)
-             #if 0
             || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
+            #if 0
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
             || NULL == CU_add_test(pSuite, "test of testDivideTupleByScalar", testDivideTupleByScalar)
