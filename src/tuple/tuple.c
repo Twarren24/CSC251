@@ -134,4 +134,9 @@ Tuple scalarDivideTuple(Tuple a, double f){
     result.w = a.w / f;
     return result;
 }
-
+//testtestMagnitudeOfVector1
+double magnitudeOfVector(Tuple a) {
+    double magnitudeSquared = a.x * a.x + a.y * a.y + a.z * a.z;
+    double magnitude = sqrt(magnitudeSquared);
+    return magnitude;
+}
