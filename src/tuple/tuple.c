@@ -179,3 +179,12 @@ Tuple normalizeVector(Tuple v) {
     return normalized;
 }
 
+Tuple normalizeVector2(Tuple v) {
+    double magnitude = magnitudeOfVector(v);
+    Tuple normalized;
+    normalized.x = v.x / magnitude;
+    normalized.y = v.y / magnitude;
+    normalized.z = v.z / magnitude;
+    normalized.w = v.w;
+    return normalized;
+}

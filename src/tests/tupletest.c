@@ -325,7 +325,6 @@ void testNormalizeVector1(void) {
     CU_ASSERT_DOUBLE_EQUAL(v.y, expected.y, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(v.z, expected.z, EPSILON);
 }
-#if 0
 /*​ 
 ​ 	​Scenario​: Normalizing vector(1, 2, 3)
 ​ 	  ​Given​ v ← vector(1, 2, 3)
@@ -343,7 +342,7 @@ void testNormalizeVector2(void) {
     CU_ASSERT_DOUBLE_EQUAL(v.y, expected.y, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(v.z, expected.z, EPSILON);
 }
-
+#if 0
 /*
 ​ 	​Scenario​: The magnitude of a normalized vector
 ​ 	  ​Given​ v ← vector(1, 2, 3)
@@ -528,8 +527,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector4", testMagnitudeOfVector4)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector5", testMagnitudeOfVector5)
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector1", testNormalizeVector1)
-             #if 0
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
+            #if 0
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
             || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
 //            || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
