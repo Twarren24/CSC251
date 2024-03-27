@@ -83,3 +83,13 @@ Tuple SubtractTwoVectors(Tuple a, Tuple b){
     result.w = b.w;
     return result;
 }
+
+//testSubtractorFromZeroVector
+Tuple SubtractVectorFromZeroVector(Tuple zero, Tuple b){
+    Tuple result;
+    result.x = 0 - b.x;
+    result.y = 0 - b.y;
+    result.z = 0 - b.z;
+    result.w = b.w;
+    return result;
+}

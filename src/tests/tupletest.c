@@ -224,7 +224,6 @@ void testNegateTuple(void) {
     CU_ASSERT( a.z == -3 );
     CU_ASSERT( a.w ==  4 );
 }
-
 /*
  	​Scenario​: Multiplying a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -527,8 +526,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
             || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
-            #if 0
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)
+             #if 0
             || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
