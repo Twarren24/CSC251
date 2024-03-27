@@ -104,4 +104,12 @@ Tuple negateTuple(Tuple a){
     return result;
 }
 
-
+//testMultiplyTupleByScalar
+Tuple  scalarMultTuple(double s , Tuple a){
+    Tuple result;
+    result.x = a.x * s;
+    result.y = a.y * s;
+    result.z = a.z * s;
+    result.w = a.w * s;
+    return result;
+}
