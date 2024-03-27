@@ -59,7 +59,7 @@ Tuple subTuples(Tuple a, Tuple b){
     result.x=a.x - b.x;
     result.y=a.y - b.y;
     result.z=a.z - b.z;
-    result.w=1;
+    result.w=a.w-b.w;
     return result;
 
 }
@@ -72,4 +72,14 @@ Tuple SubtractorVectorFromPoint(Tuple p, Tuple v){
     result.z = p.z - v.z;
     result.w = p.w;
     return result; 
+}
+
+//testSubtractTwoVectors
+Tuple SubtractTwoVectors(Tuple a, Tuple b){
+    Tuple result;
+    result.x = a.x - b.x;
+    result.y = a.y - b.y;
+    result.z = a.z - b.z;
+    result.w = b.w;
+    return result;
 }

@@ -168,7 +168,6 @@ void testSubtractVectorFromPoint(void) {
     CU_ASSERT_FALSE( is_vector(result) );
 }
 
-#if 0 
 /*
 Scenario​: Subtracting two vectors
 ​ 	  ​Given​ v1 ← vector(3, 2, 1)
@@ -210,7 +209,7 @@ void testSubtractVectorFromZeroVector(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
-
+#if 0 
 /*
 Scenario​: Negating a tuple
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -527,8 +526,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testAddTuples", testAddTuples)
             || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
-             #if 0
             || NULL == CU_add_test(pSuite, "test of testSubtractTwoVectors", testSubtractTwoVectors)
+            #if 0
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromZeroVector", testSubtractVectorFromZeroVector)
             || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
