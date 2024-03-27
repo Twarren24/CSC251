@@ -24,7 +24,7 @@ Tuple vector(double, double, double);
 Tuple subTuples(Tuple, Tuple);
 Tuple negateTuple(Tuple);
  Tuple scalarMultTuple(double, Tuple);
-// Tuple scalarDivideTuple(Tuple, double);
+ Tuple scalarDivideTuple(Tuple, double);
 // double magnitudeOfVector(Tuple);
 // Tuple normalizeVector(Tuple);
 // double dotProduct(Tuple, Tuple);

@@ -112,4 +112,14 @@ Tuple  scalarMultTuple(double s , Tuple a){
     result.z = a.z * s;
     result.w = a.w * s;
     return result;
+    
+}
+// testMultiplyTupleByFraction
+Tuple scalarDivideTuple(Tuple a, double f){
+    Tuple result;
+    result.x = a.x * f;
+    result.y = a.y * f;
+    result.z = a.z * f;
+    result.w = a.w * f;
+    return result;
 }
