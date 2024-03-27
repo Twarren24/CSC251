@@ -250,8 +250,7 @@ void testMultiplyTupleByFraction(void) {
     CU_ASSERT( a.y ==  -1 );
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
-}
-#if 0 
+} 
 /*
 	​Scenario​: Dividing a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -266,7 +265,7 @@ void testDivideTupleByScalar(void) {
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
 }
-
+#if 0
 /*
 	​Scenario​: Computing the magnitude of vector(1, 0, 0)
 ​ 	  ​Given​ v ← vector(1, 0, 0)
@@ -528,8 +527,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testNegateTuple", testNegateTuple)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByScalar", testMultiplyTupleByScalar)
             || NULL == CU_add_test(pSuite, "test of testMultiplyTupleByFraction", testMultiplyTupleByFraction)
-             #if 0
             || NULL == CU_add_test(pSuite, "test of testDivideTupleByScalar", testDivideTupleByScalar)
+            #if 0
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector1", testMagnitudeOfVector1)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector2", testMagnitudeOfVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector3", testMagnitudeOfVector3)

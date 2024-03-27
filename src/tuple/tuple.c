@@ -106,16 +106,17 @@ Tuple negateTuple(Tuple a){
 
 //testMultiplyTupleByScalar
 Tuple  scalarMultTuple(double s , Tuple a){
-    Tuple result;
+  Tuple result;
     result.x = a.x * s;
     result.y = a.y * s;
     result.z = a.z * s;
     result.w = a.w * s;
     return result;
-    
+      
 }
+
 // testMultiplyTupleByFraction
-Tuple scalarDivideTuple(Tuple a, double f){
+Tuple MultiplyTupleByFraction (Tuple a, double f){
     Tuple result;
     result.x = a.x * f;
     result.y = a.y * f;
@@ -123,3 +124,14 @@ Tuple scalarDivideTuple(Tuple a, double f){
     result.w = a.w * f;
     return result;
 }
+
+//testDivideTupleByScalar
+Tuple scalarDivideTuple(Tuple a, double f){
+    Tuple result;
+    result.x = a.x / f;
+    result.y = a.y / f;
+    result.z = a.z / f;
+    result.w = a.w / f;
+    return result;
+}
+
