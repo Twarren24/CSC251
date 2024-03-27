@@ -301,7 +301,6 @@ void testMagnitudeOfVector4(void) {
     Tuple v = vector(1, 2, 3);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), sqrt(14), EPSILON);
 }
-#if 0
 /*
 ​ 	​Scenario​: Computing the magnitude of vector(-1, -2, -3)
 ​ 	  ​Given​ v ← vector(-1, -2, -3)
@@ -311,6 +310,7 @@ void testMagnitudeOfVector5(void) {
     Tuple v = vector(-1, -2, -3);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), sqrt(14), EPSILON);
 }
+#if 0
 /*
  	​Scenario​: Normalizing vector(4, 0, 0) gives (1, 0, 0)
 ​ 	  ​Given​ v ← vector(4, 0, 0)
@@ -527,8 +527,8 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector2", testMagnitudeOfVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector3", testMagnitudeOfVector3)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector4", testMagnitudeOfVector4)
-            #if 0
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfVector5", testMagnitudeOfVector5)
+            #if 0
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector1", testNormalizeVector1)
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
