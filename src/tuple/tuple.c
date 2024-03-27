@@ -63,3 +63,13 @@ Tuple subTuples(Tuple a, Tuple b){
     return result;
 
 }
+
+//testSubtractorVactorsFromPoint
+Tuple SubtractorVectorFromPoint(Tuple p, Tuple v){
+    Tuple result;
+    result.x = p.x - v.x;
+    result.y = p.y - v.y;
+    result.z = p.z - v.z;
+    result.w = p.w;
+    return result; 
+}
