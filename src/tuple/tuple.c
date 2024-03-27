@@ -164,3 +164,18 @@ double magnitudeOfVector5(Tuple a) {
     double magnitude = sqrt(magnitudeSquared);
     return magnitude;
 }
+
+Tuple NormalizeVector1(Tuple a) {
+    double magnitudeSquared = a.x * a.x + a.y * a.y + a.z * a.z;
+    double magnitude = sqrt(magnitudeSquared);
+   } 
+Tuple normalizeVector(Tuple v) {
+    double magnitude = magnitudeOfVector(v);
+    Tuple normalized;
+    normalized.x = v.x / magnitude;
+    normalized.y = v.y / magnitude;
+    normalized.z = v.z / magnitude;
+    normalized.w = v.w;
+    return normalized;
+}
+
