@@ -152,3 +152,9 @@ double magnitudeOfVector3(Tuple a) {
     double magnitude = sqrt(magnitudeSquared);
     return magnitude;
 }
+
+double magnitudeOfVector4(Tuple a) {
+    double magnitudeSquared = a.x * a.x + a.y * a.y + a.z * a.z;
+    double magnitude = sqrt(magnitudeSquared);
+    return magnitude;
+}
