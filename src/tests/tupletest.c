@@ -147,6 +147,7 @@ void testSubtractPoints(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
+
 /*
 Scenario​: Subtracting a vector from a point
 ​ 	  ​Given​ p ← point(3, 2, 1)
@@ -223,6 +224,7 @@ void testNegateTuple(void) {
     CU_ASSERT( a.z == -3 );
     CU_ASSERT( a.w ==  4 );
 }
+
 /*
  	​Scenario​: Multiplying a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -237,6 +239,7 @@ void testMultiplyTupleByScalar(void) {
     CU_ASSERT( a.z == 10.5 );
     CU_ASSERT( a.w == -14 );
 }
+
 /*
 	​Scenario​: Multiplying a tuple by a fraction
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -251,6 +254,7 @@ void testMultiplyTupleByFraction(void) {
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
 } 
+
 /*
 	​Scenario​: Dividing a tuple by a scalar
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -265,6 +269,7 @@ void testDivideTupleByScalar(void) {
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
 }
+
 /*
 	​Scenario​: Computing the magnitude of vector(1, 0, 0)
 ​ 	  ​Given​ v ← vector(1, 0, 0)
@@ -274,6 +279,7 @@ void testMagnitudeOfVector1(void) {
     Tuple v = vector(1, 0, 0);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
+
 /*
 ​ 	​Scenario​: Computing the magnitude of vector(0, 1, 0)
 ​ 	  ​Given​ v ← vector(0, 1, 0)
@@ -283,6 +289,7 @@ void testMagnitudeOfVector2(void) {
     Tuple v = vector(0, 1, 0);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
+
 /*​
 ​ 	​Scenario​: Computing the magnitude of vector(0, 0, 1)
 ​ 	  ​Given​ v ← vector(0, 0, 1)
@@ -292,6 +299,7 @@ void testMagnitudeOfVector3(void) {
     Tuple v = vector(0, 0, 1);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
+
 /*
 ​ 	​Scenario​: Computing the magnitude of vector(1, 2, 3)
 ​ 	  ​Given​ v ← vector(1, 2, 3)
@@ -301,6 +309,7 @@ void testMagnitudeOfVector4(void) {
     Tuple v = vector(1, 2, 3);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), sqrt(14), EPSILON);
 }
+
 /*
 ​ 	​Scenario​: Computing the magnitude of vector(-1, -2, -3)
 ​ 	  ​Given​ v ← vector(-1, -2, -3)
@@ -310,6 +319,7 @@ void testMagnitudeOfVector5(void) {
     Tuple v = vector(-1, -2, -3);
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), sqrt(14), EPSILON);
 }
+
 /*
  	​Scenario​: Normalizing vector(4, 0, 0) gives (1, 0, 0)
 ​ 	  ​Given​ v ← vector(4, 0, 0)
@@ -325,6 +335,7 @@ void testNormalizeVector1(void) {
     CU_ASSERT_DOUBLE_EQUAL(v.y, expected.y, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(v.z, expected.z, EPSILON);
 }
+
 /*​ 
 ​ 	​Scenario​: Normalizing vector(1, 2, 3)
 ​ 	  ​Given​ v ← vector(1, 2, 3)
@@ -342,6 +353,7 @@ void testNormalizeVector2(void) {
     CU_ASSERT_DOUBLE_EQUAL(v.y, expected.y, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(v.z, expected.z, EPSILON);
 }
+
 /*
 ​ 	​Scenario​: The magnitude of a normalized vector
 ​ 	  ​Given​ v ← vector(1, 2, 3)
@@ -353,7 +365,7 @@ void testMagnitudeOfNormalizedVector(void) {
     v = normalizeVector( v );
     CU_ASSERT_DOUBLE_EQUAL(magnitudeOfVector(v), 1, EPSILON);
 }
-#if 0
+
 /*
 	​Scenario​: The dot product of two tuples
 ​ 	  ​Given​ a ← vector(1, 2, 3)
@@ -367,8 +379,7 @@ void testDotProduct(void) {
 }
 
 
-#if 0  // NOT NEEDED FOR CSC 251 raycaster project
-/*
+#if 0 //NOT NEEDED FOR CSC 251 raycaster project /*
 Scenario​: The cross product of two vectors
 ​ 	  ​Given​ a ← vector(1, 2, 3)
 ​ 	    ​And​ b ← vector(2, 3, 4)
@@ -483,7 +494,6 @@ void testMultColors2(void) {
     CU_ASSERT_DOUBLE_EQUAL(result.green, expected.green, EPSILON);
     CU_ASSERT_DOUBLE_EQUAL(result.blue, expected.blue, EPSILON);
 }
-#endif
 
 /* The main() function for setting up and running the tests.
  * Returns a CUE_SUCCESS on successful running, another
@@ -528,16 +538,17 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector1", testNormalizeVector1)
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
-            #if 0
             || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
+            
 //            || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
 
             /* color tests*/
-            || NULL == CU_add_test(pSuite, "test of testColors", testColors)
+            || NULL == CU_add_test(pSuite, "test of testColors", testColors) 
             || NULL == CU_add_test(pSuite, "test of testAddingColors", testAddingColors)
             || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
             || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)
             || NULL == CU_add_test(pSuite, "test of testMultColors2", testMultColors2)
+            #if 0
             #endif 
        )
     {

@@ -194,3 +194,53 @@ double magnitudeOfVector(Tuple a) {
     double magnitude = sqrt(a.x * a.x + a.y * a.y + a.z * a.z);
     return magnitude;
 }
+
+//testDotProduct
+double dotProduct(Tuple a, Tuple b) {
+    return a.x * b.x + a.y * b.y + a.z * b.z;
+}
+
+// testColors
+Color color(double r, double g, double b) {
+    Color result;
+    result.red = r;
+    result.green = g;
+    result.blue = b;
+    return result;
+}
+
+//testAddingColors
+Color addColors(Color a, Color b) {
+    Color result;
+    result.red = a.red + b.red;
+    result.green = a.green + b.green;
+    result.blue = a.blue + b.blue;
+    return result;
+}
+
+//testSubtractingColors
+Color subColors(Color a, Color b) {
+    Color result;
+    result.red = a.red - b.red;
+    result.green = a.green - b.green;
+    result.blue = a.blue - b.blue;
+    return result;
+}
+
+//testMultColors1
+Color scalarMultColor(double s, Color a){
+    Color result;
+    result.red = a.red * s;
+    result.green = a.green * s;
+    result.blue = a.blue * s;
+    return result;
+}
+
+//testMultColors2
+Color multColors(Color a, Color b) {
+    Color result;
+    result.red = a.red * b.red;
+    result.green = a.green * b.green;
+    result.blue = a.blue * b.blue;
+    return result;
+}

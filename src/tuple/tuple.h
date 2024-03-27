@@ -27,16 +27,16 @@ Tuple negateTuple(Tuple);
  Tuple scalarDivideTuple(Tuple, double);
  double magnitudeOfVector(Tuple);
 Tuple normalizeVector(Tuple);
-// double dotProduct(Tuple, Tuple);
+double dotProduct(Tuple, Tuple);
 
 // #if 0 // not needed for limited raycaster project CSC 251
 // Tuple crossProduct(Tuple, Tuple);
 // #endif
 
-// /* Color ops, using specialized three-component color struct */
-// Color color(double, double, double);
-// Color addColors(Color, Color);
-// Color subColors(Color, Color);
-// Color scalarMultColor(double, Color);
-// Color multColors(Color, Color);
+ // /* Color ops, using specialized three-component color struct */
+Color color(double, double, double);
+Color addColors(Color, Color);
+Color subColors(Color, Color);
+Color scalarMultColor(double, Color);
+Color multColors(Color, Color);
 #endif
