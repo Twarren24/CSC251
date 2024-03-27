@@ -53,3 +53,13 @@ Tuple vector(double x, double y, double z) {
     result.w = a.w + b.w;
     return result;
 }
+//testSubtractPoints
+Tuple subTuples(Tuple a, Tuple b){
+    Tuple result;
+    result.x=a.x - b.x;
+    result.y=a.y - b.y;
+    result.z=a.z - b.z;
+    result.w=1;
+    return result;
+
+}
