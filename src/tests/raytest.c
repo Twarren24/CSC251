@@ -115,17 +115,17 @@ void testRayIntersectSphereTwoPoints(void)
 // ​ 	    ​And​ xs[0] = 5.0
 // ​ 	    ​And​ xs[1] = 5.0  
 // */
-// void testRayIntersectSphereTangent(void)
-// {
-//     Ray r = ray( point(0, 1, -5), vector(0, 0, 1) );
-//     Sphere s = sphere( point(0, 0, 0), 1 );
+void testRayIntersectSphereTangent(void)
+{
+    Ray r = ray( point(0, 1, -5), vector(0, 0, 1) );
+    Sphere s = sphere( point(0, 0, 0), 1 );
     
-//     Isect xs = intersect(s, r);
+    Isect xs = intersect(s, r);
 
-//     CU_ASSERT( xs.count == 2 ); 
-//     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[0], 5.0, EPSILON ); 
-//     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[1], 5.0, EPSILON ); 
-// }
+    CU_ASSERT( xs.count == 2 ); 
+    CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[0], 5.0, EPSILON ); 
+    CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[1], 5.0, EPSILON ); 
+}
 
 // /*
 // 	​Scenario​: A ray misses a sphere
@@ -211,7 +211,7 @@ int main()
     if (  NULL == CU_add_test(pSuite, "test of Ray Creation", testRayCreation)
         || NULL == CU_add_test(pSuite, "testComputePointFromDistance", testComputePointFromDistance)
         || NULL == CU_add_test(pSuite, "testRayIntersectSphereTwoPoints", testRayIntersectSphereTwoPoints)
-//        || NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
+        || NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
 //        || NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
 //        || NULL == CU_add_test(pSuite, "testRayOriginatesInsideSphere", testRayOriginatesInsideSphere)
 //        || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
