@@ -174,17 +174,17 @@ void testRayOriginatesInsideSphere(void)
 // ​ 	    ​And​ xs[0] = -6.0
 // ​ 	    ​And​ xs[1] = -4.0  
 // */
-// void testSphereBehindRay(void)
-// {
-//     Ray r = ray( point(0, 0, 5), vector(0, 0, 1) );
-//     Sphere s = sphere( point(0, 0, 0), 1 );
+void testSphereBehindRay(void)
+{
+    Ray r = ray( point(0, 0, 5), vector(0, 0, 1) );
+    Sphere s = sphere( point(0, 0, 0), 1 );
     
-//     Isect xs = intersect(s, r);
+    Isect xs = intersect(s, r);
 
-//     CU_ASSERT( xs.count == 2 ); 
-//     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[0], -6, EPSILON ); 
-//     CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[1], -4, EPSILON );
-// }
+    CU_ASSERT( xs.count == 2 ); 
+    CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[0], -6, EPSILON ); 
+    CU_ASSERT_DOUBLE_EQUAL( xs.t_vals[1], -4, EPSILON );
+}
 
 
 // /* The main() function for setting up and running the tests.
@@ -214,7 +214,7 @@ int main()
         || NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
         || NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
         || NULL == CU_add_test(pSuite, "testRayOriginatesInsideSphere", testRayOriginatesInsideSphere)
-//        || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
+        || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
        )
     {
         CU_cleanup_registry();
