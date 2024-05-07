@@ -134,15 +134,15 @@ void testRayIntersectSphereTangent(void)
 // ​ 	  ​When​ xs ← intersect(s, r)
 // ​ 	  ​Then​ xs.count = 0	  
 // */
-// void testRayMissesSphere(void)
-// {
-//     Ray r = ray( point(0, 2, -5), vector(0, 0, 1) );
-//     Sphere s = sphere( point(0, 0, 0), 1 );
+void testRayMissesSphere(void)
+{
+    Ray r = ray( point(0, 2, -5), vector(0, 0, 1) );
+    Sphere s = sphere( point(0, 0, 0), 1 );
     
-//     Isect xs = intersect(s, r);
+    Isect xs = intersect(s, r);
 
-//     CU_ASSERT( xs.count == 0 ); 
-// }
+    CU_ASSERT( xs.count == 0 ); 
+}
 
 // /*	
 // 	​Scenario​: A ray originates inside a sphere
@@ -212,7 +212,7 @@ int main()
         || NULL == CU_add_test(pSuite, "testComputePointFromDistance", testComputePointFromDistance)
         || NULL == CU_add_test(pSuite, "testRayIntersectSphereTwoPoints", testRayIntersectSphereTwoPoints)
         || NULL == CU_add_test(pSuite, "testRayIntersectSphereTangent", testRayIntersectSphereTangent)
-//        || NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
+        || NULL == CU_add_test(pSuite, "testRayMissesSphere", testRayMissesSphere)
 //        || NULL == CU_add_test(pSuite, "testRayOriginatesInsideSphere", testRayOriginatesInsideSphere)
 //        || NULL == CU_add_test(pSuite, "testSphereBehindRay", testSphereBehindRay)
        )
