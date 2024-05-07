@@ -10,23 +10,23 @@ BINDIR = ./bin
 TESTDIR = ./src/tests
 PPMDIR = ./ppm
 
-all: tupletest #canvastest raytest hitstest rendertest
+all: tupletest canvastest raytest hitstest rendertest
 
 tupletest: $(TDIR)/tuple.* $(TESTDIR)/tupletest.c
 	$(CC) $(CFLAGS) $(TESTDIR)/tupletest.c \
 	$(TDIR)/tuple.c $(LIBS) -o $(BINDIR)/tupletest
 
-# canvastest: $(TDIR)/tuple.* $(CDIR)/canvas.* \
-# 	        $(TESTDIR)/canvastest.c 
-# 	$(CC) $(CFLAGS) $(TESTDIR)/canvastest.c \
-# 	$(TDIR)/tuple.c $(CDIR)/canvas.c \
-# 	$(LIBS) -o $(BINDIR)/canvastest 
+canvastest: $(TDIR)/tuple.* $(CDIR)/canvas.* \
+	        $(TESTDIR)/canvastest.c 
+	$(CC) $(CFLAGS) $(TESTDIR)/canvastest.c \
+	$(TDIR)/tuple.c $(CDIR)/canvas.c \
+	$(LIBS) -o $(BINDIR)/canvastest 
 
-# raytest: $(SDIR)/sphere.* $(TDIR)/tuple.* \
-# 		 $(CDIR)/canvas.* $(RDIR)/ray.* $(TESTDIR)/raytest.c 
-# 	$(CC) $(CFLAGS) $(TESTDIR)/raytest.c $(SDIR)/sphere.c \
-# 	$(TDIR)/tuple.c $(CDIR)/canvas.c \
-# 	$(RDIR)/ray.c $(LIBS) -o $(BINDIR)/raytest
+raytest: $(SDIR)/sphere.* $(TDIR)/tuple.* \
+		 $(CDIR)/canvas.* $(RDIR)/ray.* $(TESTDIR)/raytest.c 
+	$(CC) $(CFLAGS) $(TESTDIR)/raytest.c $(SDIR)/sphere.c \
+	$(TDIR)/tuple.c $(CDIR)/canvas.c \
+	$(RDIR)/ray.c $(LIBS) -o $(BINDIR)/raytest
 
 # hitstest: $(SDIR)/sphere.* $(HDIR)/hits.* $(RDIR)/ray.* \
 #           $(TESTDIR)/hitstest.c $(TDIR)/tuple.*

@@ -210,6 +210,7 @@ void testSubtractVectorFromZeroVector(void) {
     CU_ASSERT_FALSE( is_point(result) );
     CU_ASSERT_TRUE( is_vector(result) );
 }
+
 /*
 Scenario​: Negating a tuple
 ​ 	  ​Given​ a ← tuple(1, -2, 3, -4)
@@ -234,6 +235,7 @@ void testNegateTuple(void) {
 void testMultiplyTupleByScalar(void) {
     Tuple a = tuple(1, -2, 3, -4);
     a = scalarMultTuple(3.5, a);
+
     CU_ASSERT( a.x == 3.5 );
     CU_ASSERT( a.y == -7 );
     CU_ASSERT( a.z == 10.5 );
@@ -253,7 +255,7 @@ void testMultiplyTupleByFraction(void) {
     CU_ASSERT( a.y ==  -1 );
     CU_ASSERT( a.z == 1.5 );
     CU_ASSERT( a.w ==  -2 );
-} 
+}
 
 /*
 	​Scenario​: Dividing a tuple by a scalar
@@ -379,7 +381,8 @@ void testDotProduct(void) {
 }
 
 
-#if 0 //NOT NEEDED FOR CSC 251 raycaster project /*
+#if 0  // NOT NEEDED FOR CSC 251 raycaster project
+/*
 Scenario​: The cross product of two vectors
 ​ 	  ​Given​ a ← vector(1, 2, 3)
 ​ 	    ​And​ b ← vector(2, 3, 4)
@@ -520,7 +523,6 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testTupleVector", testTupleVector)
             || NULL == CU_add_test(pSuite, "test of testPointCreate", testPointCreate)
             || NULL == CU_add_test(pSuite, "test of testVectorCreate", testVectorCreate)
-            
             || NULL == CU_add_test(pSuite, "test of testAddTuples", testAddTuples)
             || NULL == CU_add_test(pSuite, "test of testSubtractPoints", testSubtractPoints)
             || NULL == CU_add_test(pSuite, "test of testSubtractVectorFromPoint", testSubtractVectorFromPoint)
@@ -539,17 +541,14 @@ int main()
             || NULL == CU_add_test(pSuite, "test of testNormalizeVector2", testNormalizeVector2)
             || NULL == CU_add_test(pSuite, "test of testMagnitudeOfNormalizedVector", testMagnitudeOfNormalizedVector)
             || NULL == CU_add_test(pSuite, "test of testDotProduct", testDotProduct)
-            
 //            || NULL == CU_add_test(pSuite, "test of testCrossProduct", testCrossProduct)
 
             /* color tests*/
-            || NULL == CU_add_test(pSuite, "test of testColors", testColors) 
+            || NULL == CU_add_test(pSuite, "test of testColors", testColors)
             || NULL == CU_add_test(pSuite, "test of testAddingColors", testAddingColors)
             || NULL == CU_add_test(pSuite, "test of testSubtractingColors", testSubtractingColors)
             || NULL == CU_add_test(pSuite, "test of testMultColors1", testMultColors1)
             || NULL == CU_add_test(pSuite, "test of testMultColors2", testMultColors2)
-            #if 0
-            #endif 
        )
     {
         CU_cleanup_registry();
